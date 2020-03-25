@@ -1,0 +1,64 @@
+pseudocode:-
+
+
+
+BEGIN
+
+numeric variable rnum
+
+DISPLAY enter number
+
+INPUT num
+
+DISPLAY the original number
+
+METHOD  create reverse method
+
+DISPLAY reversed number
+
+END
+
+program:-
+
+package march24;
+//create a class
+class Ex9recursion
+{
+	//create reverse method
+	public static void reverse(int num)
+	{
+		//check if number is less than 10 or not
+		//ifit is truethen enter the loop
+		//if it is false it execute the else block
+         if(num<10)
+		{
+			System.out.println(num);
+			return;
+		}//end of if block
+		else
+		{
+			System.out.print(num%10);
+			// in this method calling itself ie; recursion
+			reverse(num/10);
+		}//end of else block
+	}//end of reverse method  block
+	public static void main(String ...args)
+	{
+	
+	        //initialize a variable rnum
+		     int num=0;
+			//using scanner class we have to read inputs
+			java.util.Scanner sc=new java.util.Scanner(System.in);
+			//prompt the user for taking input value
+			System.out.println("enter number");
+			//read the input from keyboard and store it on one variable ie, num
+			 num=sc.nextInt();
+			//print the reversed value
+			System.out.println("reversed number is");
+			reverse(num);
+			System.out.println();
+	}//end of main method
+	
+
+}//end of class block
+
